@@ -23,7 +23,7 @@ class _LoginFormState extends State<LoginForm> {
             controller: _emailController,
             keyboardType: TextInputType.emailAddress,
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.email_outlined),
+                prefixIcon: Icon(Icons.email),
                 contentPadding: EdgeInsets.all(8.0),
                 enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
                 labelText: 'Email',
@@ -39,7 +39,11 @@ class _LoginFormState extends State<LoginForm> {
             controller: _passwordController,
             keyboardType: TextInputType.emailAddress,
             decoration: const InputDecoration(
-                icon: Icon(Icons.password), labelText: 'Password'),
+                labelText: 'Password',
+                prefixIcon: Icon(Icons.lock),
+                contentPadding: EdgeInsets.all(8.0),
+                enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
+                focusedBorder: OutlineInputBorder()),
             validator: (text) {
               if (text!.isEmpty) {
                 return 'Please Enter a valid data';
