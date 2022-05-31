@@ -3,6 +3,7 @@ import 'package:shop_cloned/route/router.dart' as router;
 import 'package:shop_cloned/route/route_constants.dart';
 
 void main() {
+  //examining git issue
   runApp(const MyApp());
 }
 
