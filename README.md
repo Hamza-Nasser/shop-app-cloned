@@ -1,6 +1,6 @@
 # shop_cloned
 
-A new Flutter project.
+The project has not done yet.
 
 ## Getting Started
 
