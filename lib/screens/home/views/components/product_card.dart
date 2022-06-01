@@ -47,7 +47,7 @@ class ProductCard extends StatelessWidget {
                           horizontal: defaultPadding / 2),
                       height: 16,
                       decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 51, 86, 91),
+                          color: accentColor,
                           borderRadius: BorderRadius.all(Radius.circular(10))),
                       child: Center(
                         child: Text(
@@ -90,17 +90,17 @@ class ProductCard extends StatelessWidget {
                   ),
                   const Spacer(),
                   priceAfterDiscount != null
-                  ? Row(
-                      children: [
-                        Text(
-                          '\$' + priceAfterDiscount.toString(),
-                          style: const TextStyle(
-                            color: Color(0xFF31B0D8),
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12,
-                          ),
-                        ),
-                        const SizedBox(width: defaultPadding),
+                      ? Row(
+                          children: [
+                            Text(
+                              '\$' + priceAfterDiscount.toString(),
+                              style: const TextStyle(
+                                color: Color(0xFF31B0D8),
+                                fontWeight: FontWeight.w500,
+                                fontSize: 12,
+                              ),
+                            ),
+                            const SizedBox(width: defaultPadding),
                             Text(
                               "\$" + price.toString(),
                               style: TextStyle(
@@ -112,16 +112,16 @@ class ProductCard extends StatelessWidget {
                                 decoration: TextDecoration.lineThrough,
                               ),
                             ),
-                      ],
-                    )
-                  : Text(
-                      "\$" + price.toString(),
-                      style: const TextStyle(
-                        color: Color(0xFF31B0D8),
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12,
-                      ),
-                    ),
+                          ],
+                        )
+                      : Text(
+                          "\$" + price.toString(),
+                          style: const TextStyle(
+                            color: defaultColor,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                          ),
+                        ),
                 ],
               ),
             ),

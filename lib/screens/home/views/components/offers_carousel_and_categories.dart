@@ -5,7 +5,7 @@ import 'package:shop_cloned/screens/home/views/components/categories.dart';
 import 'offers_carousel.dart';
 
 class OffersCarouselAndCategories extends StatelessWidget {
-  const OffersCarouselAndCategories({ Key? key }) : super(key: key);
+  const OffersCarouselAndCategories({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +18,8 @@ class OffersCarouselAndCategories extends StatelessWidget {
           child: Text('Categories'),
         ),
         Categories(),
-      ], 
-    );/*  Column(
+      ],
+    ); /*  Column(
       children: const [
         OffersCarousel(),
       ],

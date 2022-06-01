@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_cloned/constants.dart';
 
 class LoginForm extends StatefulWidget {
   final GlobalKey<FormState> formKey;
@@ -23,7 +24,10 @@ class _LoginFormState extends State<LoginForm> {
             controller: _emailController,
             keyboardType: TextInputType.emailAddress,
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.email),
+              floatingLabelStyle: TextStyle(
+                  color: accentColor,
+                ),
+                //prefixIcon: Icon(Icons.email),
                 contentPadding: EdgeInsets.all(8.0),
                 enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
                 labelText: 'Email',
@@ -35,12 +39,17 @@ class _LoginFormState extends State<LoginForm> {
               return null;
             },
           ),
+          const SizedBox(height: defaultPadding),
           TextFormField(
             controller: _passwordController,
-            keyboardType: TextInputType.emailAddress,
+            keyboardType: TextInputType.visiblePassword,
+            obscureText: true,
             decoration: const InputDecoration(
                 labelText: 'Password',
-                prefixIcon: Icon(Icons.lock),
+                floatingLabelStyle: TextStyle(
+                  color: accentColor,
+                ),
+                //prefixIcon: Icon(Icons.lock),
                 contentPadding: EdgeInsets.all(8.0),
                 enabledBorder: OutlineInputBorder(borderSide: BorderSide.none),
                 focusedBorder: OutlineInputBorder()),
